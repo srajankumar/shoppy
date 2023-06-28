@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce</title>
+    <title>Shopping Cart</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Header -->
-    <header class="text-gray-600 body-font">
+    <header class="pt-3 text-gray-600 body-font">
       <div
-        class="container justify-between mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        class="container justify-between mx-auto flex flex-wrap p-5 flex-row items-center"
       >
         <a
           href="#"
-          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          class="flex title-font font-medium items-center text-gray-900 mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
           <span class="ml-3 text-xl">Shopping Cart</span>
         </a>
         <nav
-          class="inline-flex items-center border-0 py-1 px-3 rounded text-base mt-4 md:mt-0"
+          class="inline-flex items-center border-0 py-1 px-3 rounded text-base mt-0"
         >
           <a href="#" class="hover:text-gray-900"
             ><svg
@@ -97,14 +97,14 @@
     <!-- Body -->
     <div>
       <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+        <div class="container px-5 pb-24 pt-10 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
               <a class="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="backpack"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/420x260"
+                  class="object-cover object-top w-full h-full block"
+                  src="/Images/backpack.webp"
                 />
               </a>
               <div class="mt-4">
@@ -113,9 +113,23 @@
                 >
                   Back to School
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Classical Backpack
-                </h2>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">
+                    Classical Backpack
+                  </h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
                 <p class="mt-1">₹1399.00</p>
               </div>
             </div>
@@ -123,8 +137,8 @@
               <a class="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="waterbottle"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/421x261"
+                  class="object-cover object-top w-full h-full block"
+                  src="/Images/bottle.jpg"
                 />
               </a>
               <div class="mt-4">
@@ -133,9 +147,21 @@
                 >
                   Back to School
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Water Bottle
-                </h2>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Water Bottle</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
                 <p class="mt-1">₹299.00</p>
               </div>
             </div>
@@ -144,7 +170,7 @@
                 <img
                   alt="pencilcase"
                   class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/422x262"
+                  src="/Images/pouch.avif"
                 />
               </a>
               <div class="mt-4">
@@ -153,9 +179,85 @@
                 >
                   Back to school
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Pencil Case
-                </h2>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Pencil Pouch</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
+                <p class="mt-1">₹149.00</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-top w-full h-full block"
+                  src="/Images/shoes.webp"
+                />
+              </a>
+              <div class="mt-4">
+                <h3
+                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                >
+                  Back to school
+                </h3>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Casual Shoes</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
+                <p class="mt-1">₹2999.00</p>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-bottom w-full h-full block"
+                  src="/Images/pens.webp"
+                />
+              </a>
+              <div class="mt-4">
+                <h3
+                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                >
+                  Back to school
+                </h3>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Pen Set</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
                 <p class="mt-1">₹149.00</p>
               </div>
             </div>
@@ -164,19 +266,31 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/423x263"
+                  src="/Images/penstand.webp"
                 />
               </a>
               <div class="mt-4">
                 <h3
                   class="text-gray-500 text-xs tracking-widest title-font mb-1"
                 >
-                  CATEGORY
+                  Back to school
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  The 400 Blows
-                </h2>
-                <p class="mt-1">$18.40</p>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Pen Stand</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
+                <p class="mt-1">₹399.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -184,19 +298,31 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/424x264"
+                  src="/Images/notebooks.avif"
                 />
               </a>
               <div class="mt-4">
                 <h3
                   class="text-gray-500 text-xs tracking-widest title-font mb-1"
                 >
-                  CATEGORY
+                  Back to school
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  The Catalyzer
-                </h2>
-                <p class="mt-1">$16.00</p>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Note Book Set</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
+                <p class="mt-1">₹249.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -204,59 +330,31 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/425x265"
+                  src="/Images/umbrella.png"
                 />
               </a>
               <div class="mt-4">
                 <h3
                   class="text-gray-500 text-xs tracking-widest title-font mb-1"
                 >
-                  CATEGORY
+                  Back to school
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Shooting Stars
-                </h2>
-                <p class="mt-1">$21.15</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/427x267"
-                />
-              </a>
-              <div class="mt-4">
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
-                >
-                  CATEGORY
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Neptune
-                </h2>
-                <p class="mt-1">$12.00</p>
-              </div>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-              <a class="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block"
-                  src="https://dummyimage.com/428x268"
-                />
-              </a>
-              <div class="mt-4">
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
-                >
-                  CATEGORY
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  The 400 Blows
-                </h2>
-                <p class="mt-1">$18.40</p>
+                <div class="flex justify-between text-black items-center">
+                  <h2 class="title-font text-lg font-medium">Umbrella</h2>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
+                    />
+                  </svg>
+                </div>
+                <p class="mt-1">₹199.00</p>
               </div>
             </div>
           </div>
