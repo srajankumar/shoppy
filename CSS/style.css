@@ -1,0 +1,22 @@
+.cart-item {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left-aligned content (item details) */
+.item-details {
+  flex: 1;
+}
+
+/* Right-aligned remove button */
+.remove-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Set the width of the button */
+  height: 30px; /* Set the height of the button */
+  box-shadow: 5px;
+  margin-left: 10px;
+}

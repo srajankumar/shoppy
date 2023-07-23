@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>Shoppy</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
     <!-- Header -->
-    <header class="pt-3 text-gray-600 body-font">
+    <header
+      class="dark:bg-[#121212] pt-3 text-gray-600 dark:text-gray-300 body-font"
+    >
       <div
         class="container justify-between mx-auto flex flex-wrap p-5 flex-row items-center"
       >
-        <a
-          href="#"
-          class="flex title-font font-medium items-center text-gray-900 mb-0"
-        >
+        <a href="#" class="flex title-font font-medium items-center mb-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -58,44 +62,52 @@
               mask="url(#ipTShopping0)"
             />
           </svg>
-          <span class="ml-3 text-xl">Shopping Cart</span>
+          <span class="ml-3 text-xl">Shoppy</span>
         </a>
         <nav
           class="inline-flex items-center border-0 py-1 px-3 rounded text-base mt-0"
         >
-          <a href="#" class="hover:text-gray-900"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-            >
-              <g fill="none">
-                <path
-                  fill="currentColor"
-                  d="M4 9h16l-.835 9.181A2 2 0 0 1 17.174 20H6.826a2 2 0 0 1-1.991-1.819L4 9Z"
-                  opacity=".16"
-                />
-                <path
-                  stroke="currentColor"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 9h16l-.835 9.181A2 2 0 0 1 17.174 20H6.826a2 2 0 0 1-1.991-1.819L4 9Z"
-                />
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="M8 11V8a4 4 0 1 1 8 0v3"
-                />
-              </g>
-            </svg>
+          <div class="text-center"></div>
+          <a
+            href="#"
+            data-drawer-target="drawer-cart"
+            data-drawer-show="drawer-cart"
+            class="hover:text-gray-900 dark:hover:text-gray-600 transition"
+          >
+            <button type="button" aria-controls="drawer-cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none">
+                  <path
+                    fill="currentColor"
+                    d="M4 9h16l-.835 9.181A2 2 0 0 1 17.174 20H6.826a2 2 0 0 1-1.991-1.819L4 9Z"
+                    opacity=".16"
+                  />
+                  <path
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 9h16l-.835 9.181A2 2 0 0 1 17.174 20H6.826a2 2 0 0 1-1.991-1.819L4 9Z"
+                  />
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="M8 11V8a4 4 0 1 1 8 0v3"
+                  />
+                </g>
+              </svg>
+            </button>
           </a>
         </nav>
       </div>
     </header>
     <!-- Body -->
-    <div>
+    <div class="dark:bg-[#121212]">
       <section class="text-gray-600 body-font">
         <div class="container px-5 pb-24 pt-10 mx-auto">
           <div class="flex flex-wrap -m-4">
@@ -109,28 +121,49 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to School
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">
                     Classical Backpack
                   </h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Classical Backpack')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Classical Backpack', 1399)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹1399.00</p>
+                <p class="mt-1 dark:text-gray-400">₹1399.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -143,26 +176,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to School
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Water Bottle</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Water Bottle')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Water Bottle', 299)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹299.00</p>
+                <p class="mt-1 dark:text-gray-400">₹299.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -175,26 +229,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Pencil Pouch</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Pencil Pouch')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Pencil Pouch', 149)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹149.00</p>
+                <p class="mt-1 dark:text-gray-400">₹149.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -207,26 +282,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Casual Shoes</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Casual Shoes')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Casual Shoes', 2999)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹2999.00</p>
+                <p class="mt-1 dark:text-gray-400">₹2999.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -239,26 +335,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Pen Set</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Pen Set')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Pen Set', 149)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹149.00</p>
+                <p class="mt-1 dark:text-gray-400">₹149.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -271,26 +388,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Pen Stand</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Pen Stand')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Pen Stand', 399)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹399.00</p>
+                <p class="mt-1 dark:text-gray-400">₹399.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -303,26 +441,47 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Note Book Set</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Note Book Set')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Note Book Set', 249)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹249.00</p>
+                <p class="mt-1 dark:text-gray-400">₹249.00</p>
               </div>
             </div>
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -335,31 +494,96 @@
               </a>
               <div class="mt-4">
                 <h3
-                  class="text-gray-500 text-xs tracking-widest title-font mb-1"
+                  class="text-gray-400 text-xs tracking-widest title-font mb-1"
                 >
                   Back to school
                 </h3>
-                <div class="flex justify-between text-black items-center">
+                <div
+                  class="flex justify-between text-black dark:text-gray-50 items-center"
+                >
                   <h2 class="title-font text-lg font-medium">Umbrella</h2>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="bg-gray-200 text-gray-500 hover:text-gray-700 rounded"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4z"
-                    />
-                  </svg>
+                  <div class="space-x-2 md:space-x-1">
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="removeFromCart('Umbrella')"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path fill="currentColor" d="M4 9h12v2H4z" />
+                      </svg>
+                    </button>
+                    <button
+                      class="inline-flex justify-center items-center text-gray-500 shadow-lg w-6 h-6 dark:text-white dark:hover:text-gray-600 rounded-md hover:text-gray-800 hover:shadow-sm"
+                      onclick="addToCart('Umbrella', 199)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M11 9V4H9v5H4v2h5v5h2v-5h5V9z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <p class="mt-1">₹199.00</p>
+                <p class="mt-1 dark:text-gray-400">₹199.00</p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- Cart Section -->
+    <div
+      id="drawer-cart"
+      class="fixed pt-5 top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-[#121212]"
+      tabindex="-1"
+      aria-labelledby="drawer-cart-label"
+    >
+      <h5
+        id="drawer-cart-label"
+        class="text-base font-semibold text-gray-400 uppercase dark:text-gray-400"
+      >
+        Cart
+      </h5>
+      <button
+        type="button"
+        data-drawer-hide="drawer-cart"
+        aria-controls="drawer-cart"
+        class="mt-1 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span class="sr-only">Close cart</span>
+      </button>
+      <div class="pt-5 dark:text-white">
+        <ul id="cart" class="flex flex-col">
+          <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p class="pt-5">Total Price: ₹<span id="total-price">0</span></p>
+      </div>
+    </div>
+    <script src="./JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>
 </html>
