@@ -9,12 +9,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <!-- Header -->
     <header
-      class="dark:bg-[#121212] pt-3 text-gray-600 dark:text-gray-300 body-font"
+      class="dark:bg-[#121212] pt-3 text-gray-600 dark:text-gray-100 body-font"
     >
       <div
         class="container justify-between mx-auto flex flex-wrap p-5 flex-row items-center"
@@ -72,7 +72,7 @@
             href="#"
             data-drawer-target="drawer-cart"
             data-drawer-show="drawer-cart"
-            class="hover:text-gray-900 dark:hover:text-gray-600 transition"
+            class="hover:text-gray-900 dark:hover:text-gray-500 transition"
           >
             <button type="button" aria-controls="drawer-cart">
               <svg
@@ -109,14 +109,14 @@
     <!-- Body -->
     <div class="dark:bg-[#121212]">
       <section class="text-gray-600 body-font">
-        <div class="container px-5 pb-24 pt-10 mx-auto">
+        <div class="container px-5 pb-10 pt-10 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
               <a class="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="backpack"
                   class="object-cover object-top w-full h-full block"
-                  src="Images/backpack.webp"
+                  src="assets/backpack.webp"
                 />
               </a>
               <div class="mt-4">
@@ -171,7 +171,7 @@
                 <img
                   alt="waterbottle"
                   class="object-cover object-top w-full h-full block"
-                  src="Images/bottle.jpg"
+                  src="assets/bottle.jpg"
                 />
               </a>
               <div class="mt-4">
@@ -224,7 +224,7 @@
                 <img
                   alt="pencilcase"
                   class="object-cover object-center w-full h-full block"
-                  src="Images/pouch.avif"
+                  src="assets/pouch.avif"
                 />
               </a>
               <div class="mt-4">
@@ -277,7 +277,7 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-top w-full h-full block"
-                  src="Images/shoes.webp"
+                  src="assets/shoes.webp"
                 />
               </a>
               <div class="mt-4">
@@ -330,7 +330,7 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-bottom w-full h-full block"
-                  src="Images/pens.webp"
+                  src="assets/pens.webp"
                 />
               </a>
               <div class="mt-4">
@@ -383,7 +383,7 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="Images/penstand.webp"
+                  src="assets/penstand.webp"
                 />
               </a>
               <div class="mt-4">
@@ -436,7 +436,7 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="Images/notebooks.avif"
+                  src="assets/notebooks.avif"
                 />
               </a>
               <div class="mt-4">
@@ -489,7 +489,7 @@
                 <img
                   alt="ecommerce"
                   class="object-cover object-center w-full h-full block"
-                  src="Images/umbrella.png"
+                  src="assets/umbrella.png"
                 />
               </a>
               <div class="mt-4">
@@ -541,7 +541,6 @@
         </div>
       </section>
     </div>
-
     <!-- Cart Section -->
     <div
       id="drawer-cart"
@@ -551,7 +550,7 @@
     >
       <h5
         id="drawer-cart-label"
-        class="text-base font-semibold text-gray-400 uppercase dark:text-gray-400"
+        class="text-base font-semibold text-gray-900 uppercase dark:text-gray-200"
       >
         Cart
       </h5>
@@ -559,7 +558,7 @@
         type="button"
         data-drawer-hide="drawer-cart"
         aria-controls="drawer-cart"
-        class="mt-1 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        class="mt-1 text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
       >
         <svg
           aria-hidden="true"
@@ -576,14 +575,34 @@
         </svg>
         <span class="sr-only">Close cart</span>
       </button>
-      <div class="pt-5 dark:text-white">
+      <div class="pt-5 dark:text-gray-100">
         <ul id="cart" class="flex flex-col">
           <!-- Cart items will be dynamically added here -->
         </ul>
+        <div class="w-full h-[1px] bg-[#121212] dark:bg-gray-100"></div>
         <p class="pt-5">Total Price: ₹<span id="total-price">0</span></p>
+        <button
+          class="mt-4 dark:bg-gray-700 bg-gray-500 text-sm dark:hover:bg-gray-800 hover:bg-gray-600 text-white rounded-lg w-full py-1"
+          onclick="checkout()"
+        >
+          Checkout
+        </button>
       </div>
     </div>
-    <script src="./JS/script.js"></script>
+    <!-- Footer -->
+    <footer class="text-center bg-[#121212] py-5 text-sm text-white">
+      <div>
+        © 2023
+        <a
+          class="hover:text-gray-500"
+          href="https://github.com/srajankumar/Shoppy"
+          target="_blank"
+          >Shoppy
+        </a>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./utils/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>
 </html>

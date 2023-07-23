@@ -26,6 +26,16 @@ function removeFromCart(itemName) {
   alert(itemName + " removed from cart");
 }
 
+function checkout() {
+  for (const item in cartItems) {
+    delete cartItems[item];
+  }
+
+  updateCart();
+
+  alert("Order Placed!");
+}
+
 function updateCart() {
   const cartList = document.getElementById("cart");
   const totalPriceElement = document.getElementById("total-price");
